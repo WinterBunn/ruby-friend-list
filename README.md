@@ -23,7 +23,14 @@ Things you may want to cover:
 
 * ...
 
+MVC STRUCTURE
+pages#home
+this will send to the pages_controller.rb and to the method home
+this expects a view called home.html.erb in the views/pages folder
 
+TO GENERATE A CONTROLLER
+rails generate controller pages
+or
 rails g controller home index
 
 rails routes --> list all the current routes
