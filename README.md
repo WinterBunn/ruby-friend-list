@@ -33,4 +33,12 @@ rails generate controller pages
 or
 rails g controller home index
 
+TO GENERATE A SCAFOLD
+rails generate scaffold {Name} tile:string description:text <-some examples of data that we can defie
+
+TO RUN MIGRATION
+rails db:migrate
+
+EXTRA NOTES
 rails routes --> list all the current routes
+rails routes --expanded
