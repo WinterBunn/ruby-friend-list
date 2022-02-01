@@ -54,3 +54,16 @@ Model name: article
 Class name: Article -> Capitalized A and singular, CamelCase
 File name: article.rb -> singular and all lowercase, snake_case
 Table name: articles -> plural of model name and all lowercase
+
+USING THE RAILS CONSOLE TO CREATE AN OBJECT
+Article.all
+Article.create(title: "My dear Dairy", description: "This is my dairy, do not read please")
+Article.find(1)
+--preferred way
+article = Article.new
+article.title= "My first book"
+article.description= "This is my first book that i'm creating from the console"
+article.save
+--other way
+article = Article.new(title: "My dear Dairy", description: "This is my dairy, do not read please")
+article.save
