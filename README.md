@@ -67,3 +67,13 @@ article.save
 --other way
 article = Article.new(title: "My dear Dairy", description: "This is my dairy, do not read please")
 article.save
+-reading
+Article.find(1)
+Article.first
+Article.last
+-deleting
+article = Article.find(3)
+article.destroy
+-reading errors when trying to save an object
+article.save
+article.errors or article.errors.full_messages
