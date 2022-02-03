@@ -20,6 +20,9 @@
     <%= render 'home/header' %> <!-- Importing our header into the page (home/_header.html.erb)-->
     <div class="container">
       </br>
+      <% flash.each do |name, msg| %>
+        <%= msg %>
+      <% end %>
       <%= yield %>
     </div>
 
