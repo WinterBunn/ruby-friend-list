@@ -1,0 +1,24 @@
+<h1>Editing article</h1>
+
+<% if @article.errors.any? %>
+    <h3>Errors creating the article:</h3>
+    <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+    </ul>
+<% end %>
+<!-- The form_with(model: @article) automatically knows to submit to the update action-->
+<%= form_with(model: @article, local:true) do |f|%>
+    <p>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </p>
+    <p>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
