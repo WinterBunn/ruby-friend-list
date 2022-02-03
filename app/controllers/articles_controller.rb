@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-    def show 
+    def show
         #params is where all the parameters are allocated
         #in order to make the variable available in all the app yo need to make it an instance with "@"
         @article = Article.find(params[:id])
@@ -36,6 +36,12 @@ class ArticlesController < ApplicationController
         else
             render 'edit'
         end
+    end
+
+    def destroy
+        @article = Article.find(params[:id])
+        @article.destroy
+        redirect_to articles_path
     end
 
     # Only allow a list of trusted parameters through.
