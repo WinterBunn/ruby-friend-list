@@ -77,3 +77,5 @@ article.destroy
 -reading errors when trying to save an object
 article.save
 article.errors or article.errors.full_messages
+
+COURSE REPOSITORY: https://github.com/udemyrailscourse/alpha-blog-6
