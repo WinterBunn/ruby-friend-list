@@ -48,6 +48,7 @@ rails db:rollback
 EXTRA NOTES
 rails routes --> list all the current routes
 rails routes --expanded
+rails routes --expanded | grep edit #search for an specific word
 
 RAILS NAMING CONVENTION
 Model name: article
