@@ -11,7 +11,7 @@
         <tbody>
             <% @articles.each do |article| %>
                 <tr>
-                    <td><%= article.user.username %></td>
+                    <td><%= link_to article.user.username, user_path(article.user) %></td>
                     <td><%= article.title %></td>
                     <td><%= article.description%></td>
                     <td><%= button_to 'Delete', article_path(article), method: :delete %></td>

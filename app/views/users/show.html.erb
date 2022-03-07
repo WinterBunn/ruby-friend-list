@@ -1,3 +1,6 @@
 <h1 class="text-center mt-4"><%= @user.username %>'s Profile</h1>
 <img class="reounded mx-auto d-block" src="https://robohash.org/2?set=set4">
+<div class="text-center mt-4">
+    <%= link_to "Edit your profile", edit_user_path(@user), class: "btn btn-outline-info" %>
+</div>
 <%= render "articles/article" %>
