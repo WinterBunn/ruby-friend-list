@@ -3,7 +3,8 @@
 <p><strong>Author: </strong><%= @article.user.username %></p>
 <p><strong>Title: </strong><%= @article.title %></p>
 <p><strong>Description: </strong><%= @article.description %></p>
-
-<%= link_to "Edit", edit_article_path(@article.id) %> |
-<%= link_to "Delete", article_path(@article.id), method: :delete %> |
+<% if logged_in? && @article.user == current_user %>
+    <%= link_to "Edit", edit_article_path(@article.id) %> |
+    <%= link_to "Delete", article_path(@article.id), method: :delete %> |
+<% end %>
 <%= link_to "Return to articles listings", articles_path %>
