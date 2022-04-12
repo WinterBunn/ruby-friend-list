@@ -83,3 +83,6 @@ COURSE REPOSITORY: https://github.com/udemyrailscourse/alpha-blog-6
 
 To run test on the project
 rails test
+rails test test/controllers
+
+rails generate test_unit:scaffold category
