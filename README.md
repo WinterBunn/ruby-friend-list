@@ -80,3 +80,6 @@ article.save
 article.errors or article.errors.full_messages
 
 COURSE REPOSITORY: https://github.com/udemyrailscourse/alpha-blog-6
+
+To run test on the project
+rails test
