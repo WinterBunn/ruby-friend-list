@@ -5,6 +5,7 @@
                 <th scope="col">Author</th>
                 <th scope="col">Title</th>
                 <th scope="col">Description</th>
+                <th scope="col">Categories</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -14,6 +15,7 @@
                     <td><%= link_to article.user.username, user_path(article.user) %></td>
                     <td><%= article.title %></td>
                     <td><%= article.description%></td>
+                    <td><%= render article.categories %></td>
                     <td><%= link_to 'Show', article_path(article) %></td>
                     <% if logged_in? && article.user == current_user %>
                         <td><%= button_to 'Delete', article_path(article), method: :delete %></td>
